@@ -12,6 +12,7 @@ import { VisitorListComponent } from './visitor-list/visitor-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { NgxBarcodeModule } from 'ngx-barcode';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    NgxBarcodeModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
