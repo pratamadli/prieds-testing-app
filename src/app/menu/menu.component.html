@@ -1,4 +1,22 @@
-<div fxLayout="column" fxLayoutGap="8px">
+<div class="container">
+  <h2 class="title">Welcome to the Hospital</h2>
+  <div class="menu-cards">
+    <div class="menu-card print-queue" routerLink="/request-queue-number">
+      <h3>Print Queue</h3>
+      <p>Generate queue numbers for visitors.</p>
+    </div>
+    <div class="menu-card register" routerLink="/input-visitor-details">
+      <h3>Register</h3>
+      <p>Register new visitors.</p>
+    </div>
+    <div class="menu-card visitor-list" routerLink="/visitor-list">
+      <h3>Visitor List</h3>
+      <p>View the list of visitors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- <div fxLayout="column" fxLayoutGap="8px">
   <button mat-raised-button style="background: slateblue" (click)="changePage('request-queue-number')"> Print Queue Number </button>
   <button mat-raised-button style="background: green" (click)="changePage('input-visitor-details')"> Input Visitor Details </button>
   <button mat-raised-button style="background: orange" (click)="changePage('visitor-list')"> Visitor List </button>
@@ -37,4 +55,4 @@
     <br>
     Happy Creating!
   </p>
-</div>
+</div> -->

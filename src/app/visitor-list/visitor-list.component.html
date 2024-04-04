@@ -1,1 +1,34 @@
-<p>visitor-list works!</p>
+<div class="container">
+  <h2>Visitor List</h2>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Visitor Number Column -->
+    <ng-container matColumnDef="visitorNumber">
+      <mat-header-cell *matHeaderCellDef> Visitor Number </mat-header-cell>
+      <mat-cell *matCellDef="let visitor">
+        {{ visitor.visitorNumber }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Polyclinic Column -->
+    <ng-container matColumnDef="polyclinicName">
+      <mat-header-cell *matHeaderCellDef> Polyclinic Name </mat-header-cell>
+      <mat-cell *matCellDef="let visitor">
+        {{ visitor.polyclinicName }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Queue Number Column -->
+    <ng-container matColumnDef="queueNumber">
+      <mat-header-cell *matHeaderCellDef> Queue Number </mat-header-cell>
+      <mat-cell *matCellDef="let visitor"> {{ visitor.queueNumber }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let visitor; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
+<div class="button-container">
+  <button mat-raised-button color="primary" (click)="goBackToMenu()">
+    Back to Menu
+  </button>
+</div>

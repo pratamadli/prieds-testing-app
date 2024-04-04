@@ -1,0 +1,54 @@
+.container {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .menu-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    text-align: center;
+  }
+  
+  .print-queue {
+    background-color: #4285f4; /* Blue */
+  }
+  
+  .register {
+    background-color: #0f9d58; /* Green */
+  }
+  
+  .visitor-list {
+    background-color: #db4437; /* Red */
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-card h3 {
+    margin-top: 0;
+  }
+  
+  .menu-card p {
+    margin-bottom: 0;
+  }
+  
+  .menu-card:hover {
+    background-color: #a89f9f;
+    cursor: pointer;
+  }
+  

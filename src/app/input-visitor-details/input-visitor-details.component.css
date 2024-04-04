@@ -1,0 +1,26 @@
+.container {
+    margin: 20px;
+  }
+  
+  .form-columns {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .half-width {
+    width: calc(50% - 12px); /* Adjust width as needed */
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  

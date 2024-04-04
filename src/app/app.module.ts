@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputVisitorDetailsComponent } from './input-visitor-details/input-visitor-details.component';
@@ -9,6 +9,8 @@ import { MenuComponent } from './menu/menu.component';
 import { MaterialModule } from './tools/material.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,11 @@ import { VisitorListComponent } from './visitor-list/visitor-list.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, // Import HttpClientModule here
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
