@@ -11,6 +11,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { MatTableModule } from '@angular/material/table';
     MenuComponent,
     InputVisitorDetailsComponent,
     RequestQueueNumberComponent,
-    VisitorListComponent
+    VisitorListComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ import { MatTableModule } from '@angular/material/table';
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

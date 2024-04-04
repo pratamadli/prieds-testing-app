@@ -11,17 +11,32 @@
             name="firstName"
             id="firstName"
             required
+            [(ngModel)]="visitorData.firstName"
           />
         </mat-form-field>
 
         <mat-form-field class="full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput type="text" name="lastName" id="lastName" required />
+          <input
+            matInput
+            type="text"
+            name="lastName"
+            id="lastName"
+            required
+            [(ngModel)]="visitorData.lastName"
+          />
         </mat-form-field>
 
         <mat-form-field class="full-width">
           <mat-label>ID Card</mat-label>
-          <input matInput type="text" name="idCard" id="idCard" required />
+          <input
+            matInput
+            type="text"
+            name="idCard"
+            id="idCard"
+            required
+            [(ngModel)]="visitorData.idCard"
+          />
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -29,9 +44,10 @@
           <input
             matInput
             [matDatepicker]="picker"
-            name="birthdate"
-            id="birthdate"
+            name="birthDate"
+            id="birthDate"
             required
+            [(ngModel)]="visitorData.birthDate"
           />
           <mat-datepicker-toggle
             matSuffix
@@ -48,17 +64,32 @@
             name="contactNumber"
             id="contactNumber"
             required
+            [(ngModel)]="visitorData.contactNumber"
           />
         </mat-form-field>
 
         <mat-form-field class="full-width">
           <mat-label>Email</mat-label>
-          <input matInput type="email" name="email" id="email" required />
+          <input
+            matInput
+            type="email"
+            name="email"
+            id="email"
+            required
+            [(ngModel)]="visitorData.email"
+          />
         </mat-form-field>
 
         <mat-form-field class="full-width">
           <mat-label>Address</mat-label>
-          <input matInput type="text" name="address" id="address" required />
+          <input
+            matInput
+            type="text"
+            name="address"
+            id="address"
+            required
+            [(ngModel)]="visitorData.address"
+          />
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -69,6 +100,7 @@
             name="emergencyContactName"
             id="emergencyContactName"
             required
+            [(ngModel)]="visitorData.emergencyContactName"
           />
         </mat-form-field>
       </div>
@@ -76,7 +108,12 @@
       <div class="column">
         <mat-form-field class="full-width">
           <mat-label>Sex</mat-label>
-          <mat-select name="sex" id="sex">
+          <mat-select
+            name="sex"
+            id="sex"
+            required
+            [(ngModel)]="visitorData.sex"
+          >
             <mat-option value="male">Male</mat-option>
             <mat-option value="female">Female</mat-option>
           </mat-select>
@@ -84,22 +121,50 @@
 
         <mat-form-field class="half-width">
           <mat-label>Height (cm)</mat-label>
-          <input matInput type="number" name="height" id="height" />
+          <input
+            matInput
+            type="number"
+            name="height"
+            id="height"
+            required
+            [(ngModel)]="visitorData.height"
+          />
         </mat-form-field>
 
         <mat-form-field class="half-width">
           <mat-label>Weight (kg)</mat-label>
-          <input matInput type="number" name="weight" id="weight" />
+          <input
+            matInput
+            type="number"
+            name="weight"
+            id="weight"
+            required
+            [(ngModel)]="visitorData.weight"
+          />
         </mat-form-field>
 
         <mat-form-field class="half-width">
           <mat-label>City</mat-label>
-          <input matInput type="text" name="city" id="city" required />
+          <input
+            matInput
+            type="text"
+            name="city"
+            id="city"
+            required
+            [(ngModel)]="visitorData.city"
+          />
         </mat-form-field>
 
         <mat-form-field class="half-width">
           <mat-label>Province</mat-label>
-          <input matInput type="text" name="province" id="province" required />
+          <input
+            matInput
+            type="text"
+            name="province"
+            id="province"
+            required
+            [(ngModel)]="visitorData.province"
+          />
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -110,15 +175,24 @@
             name="emergencyContactNumber"
             id="emergencyContactNumber"
             required
+            [(ngModel)]="visitorData.emergencyContactNumber"
           />
         </mat-form-field>
       </div>
     </div>
 
     <div class="button-container">
-      <button mat-raised-button color="accent" (click)="goBack()">Back</button>
-
-      <button mat-raised-button color="primary" type="submit">Register</button>
+      <button mat-raised-button color="accent" type="button" (click)="goBack()">
+        Back
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="registerVisitor()"
+      >
+        Register
+      </button>
     </div>
   </form>
 </div>
